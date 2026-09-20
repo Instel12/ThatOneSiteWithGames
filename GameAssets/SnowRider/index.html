@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Snow Rider 3D</title>
+    <meta name="description" content="Ride your snow sled through icy slopes and endless obstacles. Snow Rider 3D delivers fast action, smooth controls, and endless fun. Play now!">
+    <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Snow Rider" />
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="TemplateData/style.css?v7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Snow Rider 3D">
+    <meta name="keywords" content="Snow Rider 3D, skiing game, winter sports, snowboarding, ski game, mountain landscapes, skiing adventure, snowboarding adventure, snowy mountain, sleigh ride, winter game">
+    <style>
+        /* Fill the container with no black gutter.
+           Landscape boxes fill directly; portrait boxes (mobile held upright) render
+           the landscape view and crop the sides (cover), so the vertical area is filled. */
+        html, body { width: 100%; height: 100%; background: #0e2233; }
+        .webgl-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            -webkit-transform: none;
+            transform: none;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #gameContainer canvas {
+            width: 100% !important;
+            height: 100% !important;
+            background: #0e2233;
+        }
+        /* Landscape / wide containers: the game fills exactly */
+        @media (min-aspect-ratio: 1/1) {
+            #gameContainer {
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+            }
+        }
+        /* Portrait viewport (only when the game page is opened directly on a phone):
+           keep the game landscape and crop the sides so there is no black bar. On the
+           site the game is embedded in a landscape frame, so this rarely applies. */
+        @media (max-aspect-ratio: 1/1) {
+            #gameContainer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                height: 100% !important;
+                width: 170vh !important;
+                margin: 0 !important;
+            }
+        }
+
+        /* On-screen touch controls, shown only on touch (coarse-pointer) devices */
+        #touch-controls {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99999;
+            display: none;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: end;
+            align-items: flex-end;
+            padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+            pointer-events: none;
+        }
+        /* Shown on touch devices: via the media query and, more reliably, a JS-added class */
+        @media (pointer: coarse), (hover: none) {
+            #touch-controls { display: -webkit-box; display: flex; }
+        }
+        html.is-touch #touch-controls { display: -webkit-box; display: flex; }
+        .tc-btn {
+            pointer-events: auto;
+            width: 80px;
+            height: 80px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            padding: 0;
+            font-size: 34px;
+            line-height: 1;
+            color: #ffffff;
+            /* Dark translucent so the buttons stay visible on both white snow and blue sky */
+            background: rgba(17, 38, 64, 0.55);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: none;
+            cursor: pointer;
+        }
+        .tc-btn.tc-active {
+            background: rgba(47, 128, 237, 0.95);
+            border-color: #fff;
+            -webkit-transform: scale(0.92);
+            transform: scale(0.92);
+        }
+        #tc-up { margin-bottom: 10px; }
+
+        /* Themed loading screen that covers the game's black boot / fade-in */
+        #sr-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 90000;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            background: linear-gradient(160deg, #bfe3f5 0%, #e8f6fc 45%, #ffffff 100%);
+            -webkit-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+        }
+        #sr-loading.sr-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #sr-loading img {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 18px;
+            -webkit-filter: drop-shadow(0 6px 14px rgba(47, 128, 237, 0.3));
+            filter: drop-shadow(0 6px 14px rgba(47, 128, 237, 0.3));
+        }
+        #sr-loading .sr-bar {
+            width: 160px;
+            height: 8px;
+            border-radius: 6px;
+            background: rgba(47, 128, 237, 0.18);
+            overflow: hidden;
+        }
+        #sr-loading .sr-bar span {
+            display: block;
+            height: 100%;
+            width: 30%;
+            border-radius: 6px;
+            background: linear-gradient(90deg, #56ccf2, #2f80ed);
+            -webkit-animation: srLoad 1.1s ease-in-out infinite;
+            animation: srLoad 1.1s ease-in-out infinite;
+        }
+        #sr-loading .sr-text {
+            margin-top: 14px;
+            font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #2f6ca8;
+        }
+        @-webkit-keyframes srLoad { 0% { -webkit-transform: translateX(-120%); } 100% { -webkit-transform: translateX(360%); } }
+        @keyframes srLoad { 0% { transform: translateX(-120%); } 100% { transform: translateX(360%); } }
+    </style>
+    <script src="TemplateData/UnityProgress.js?v7"></script>
+    <script src="Build/UnityLoader.js?v7"></script>
+    <script>
+        function srHideLoading() {
+            var el = document.getElementById('sr-loading');
+            if (!el || el.classList.contains('sr-hidden')) { return; }
+            el.classList.add('sr-hidden');
+            setTimeout(function () { if (el) { el.style.display = 'none'; } }, 600);
+        }
+        function srProgress(inst, prog) {
+            UnityProgress(inst, prog);
+            // When the game reports fully loaded, wait for its fade-in, then reveal it.
+            if (prog === 1 || prog === "complete") { setTimeout(srHideLoading, 2200); }
+        }
+        // Safety net: never keep the loader up longer than this.
+        setTimeout(srHideLoading, 15000);
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SnowRider3D-gd-1.json", {onProgress: srProgress,Module:{onRuntimeInitialized: function() {srProgress(gameInstance, "complete")}}});
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LTBNBMNMX5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LTBNBMNMX5');
+    </script>
+</head>
+<body style="overflow:hidden;padding:0px;margin:0px;">
+    <div class="webgl-content">
+        <div id="gameContainer" style="width: 960px; height: 600px; margin: auto"></div>
+    </div>
+
+    <!-- Themed loading screen (hidden once the game has finished loading) -->
+    <div id="sr-loading">
+        <img src="/assets/img/logo.svg" alt="Snow Rider 3D" width="110" height="110">
+        <div class="sr-bar"><span></span></div>
+        <div class="sr-text">Loading…</div>
+    </div>
+
+    <!-- Mobile touch controls -->
+    <div id="touch-controls" aria-hidden="true">
+        <button type="button" id="tc-left" class="tc-btn" aria-label="Steer left">&#9664;</button>
+        <button type="button" id="tc-up" class="tc-btn" aria-label="Jump">&#9650;</button>
+        <button type="button" id="tc-right" class="tc-btn" aria-label="Steer right">&#9654;</button>
+    </div>
+    <script>
+    (function () {
+        // Synthetic key events with keyCode/which forced, so the Unity WebGL build registers them.
+        var KEYS = {
+            left:  { key: 'ArrowLeft',  code: 'ArrowLeft',  kc: 37 },
+            up:    { key: 'ArrowUp',    code: 'ArrowUp',    kc: 38 },
+            right: { key: 'ArrowRight', code: 'ArrowRight', kc: 39 }
+        };
+        function fire(type, info) {
+            var targets = [document, window];
+            var canvas = document.querySelector('#gameContainer canvas');
+            if (canvas) { targets.push(canvas); }
+            for (var i = 0; i < targets.length; i++) {
+                var t = targets[i];
+                if (!t || !t.dispatchEvent) { continue; }
+                var e = new KeyboardEvent(type, { key: info.key, code: info.code, bubbles: true, cancelable: true });
+                try { Object.defineProperty(e, 'keyCode', { get: function () { return info.kc; } }); } catch (err) {}
+                try { Object.defineProperty(e, 'which',   { get: function () { return info.kc; } }); } catch (err) {}
+                t.dispatchEvent(e);
+            }
+        }
+        var held = {};
+        function press(name, btn) {
+            var info = KEYS[name];
+            if (!info || held[name]) { return; }
+            held[name] = true;
+            if (btn) { btn.classList.add('tc-active'); }
+            fire('keydown', info);
+        }
+        function release(name, btn) {
+            var info = KEYS[name];
+            if (!info || !held[name]) { return; }
+            held[name] = false;
+            if (btn) { btn.classList.remove('tc-active'); }
+            fire('keyup', info);
+        }
+        function bind(id, name) {
+            var el = document.getElementById(id);
+            if (!el) { return; }
+            var start = function (ev) { ev.preventDefault(); press(name, el); };
+            var end   = function (ev) { if (ev) { ev.preventDefault(); } release(name, el); };
+            el.addEventListener('touchstart', start, { passive: false });
+            el.addEventListener('touchend', end, { passive: false });
+            el.addEventListener('touchcancel', end, { passive: false });
+            el.addEventListener('mousedown', start);
+            el.addEventListener('mouseup', end);
+            el.addEventListener('mouseleave', end);
+            el.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+        }
+        function isTouch() {
+            return ('ontouchstart' in window)
+                || (navigator.maxTouchPoints || 0) > 0
+                || (navigator.msMaxTouchPoints || 0) > 0
+                || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+        }
+        function init() {
+            if (isTouch()) { document.documentElement.classList.add('is-touch'); }
+            // Reveal the controls the first time the screen is actually touched, too.
+            window.addEventListener('touchstart', function once() {
+                document.documentElement.classList.add('is-touch');
+                window.removeEventListener('touchstart', once);
+            }, { passive: true });
+            bind('tc-left', 'left');
+            bind('tc-up', 'up');
+            bind('tc-right', 'right');
+            window.addEventListener('blur', function () {
+                for (var n in KEYS) { if (held[n]) { release(n, document.getElementById('tc-' + n)); } }
+            });
+        }
+        if (document.readyState !== 'loading') { init(); }
+        else { document.addEventListener('DOMContentLoaded', init); }
+    })();
+    </script>
+</body>
+</html>
