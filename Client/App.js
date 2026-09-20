@@ -17,7 +17,7 @@ const VeryMeaningfulMessages = [
 ];
 
 async function Initialize() {
-    const response = await fetch("/Metadata.json");
+    const response = await fetch(MetadataPath);
     Metadata = await response.json();
 
     for (var i = 0; Metadata["Games"].length > i; i++) {
