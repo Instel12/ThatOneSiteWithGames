@@ -1,5 +1,6 @@
 const Content = document.getElementsByClassName("Content")[0];
 const Title = document.getElementById("Title");
+const Options = document.getElementsByClassName("Options")[0];
 
 let TempContent = "";
 let Tags = [];
@@ -13,7 +14,8 @@ const VeryMeaningfulMessages = [
     "man, i just farted in the elevator",
     `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "I want my baby back baby back baby back I want my baby back baby back baby back CHILLIS BABY BACK RIBS barbaque sauce",
-    "oh how i hate shockwaves 🤓"
+    "oh how i hate shockwaves 🤓",
+    "999"
 ];
 
 async function Initialize() {
@@ -46,6 +48,7 @@ function LoadHome() {
         AddGameTemp(Metadata["Games"][i].Base, Metadata["Games"][i].Index, Metadata["Games"][i].Title, Metadata["Games"][i].Icon)
     }
 
+    Options.innerHTML = "";
     Content.innerHTML = TempContent;
 }
 
@@ -62,6 +65,8 @@ async function LoadGame(ContentBase, IndexName) {
     }
 
     if (ClickerEasteregg < 25) ClickerEasteregg = 0;
+
+    Options.innerHTML = "<a onclick='Content.requestFullscreen();'>Fullscreen</a>";
     Content.innerHTML = `<iframe srcdoc="${finalText.replace(/"/g, '&quot;')}"></iframe>`;
 }
 

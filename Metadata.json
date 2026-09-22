@@ -647,6 +647,32 @@
 
             "Base": "SurvivalRace",
             "Index": "index.html"
+        },
+        {
+            "Title": "Fruit Ninja",
+            "Icon": "FruitNinja/Icon.jpg",
+            "Author": "Halfbrick",
+            "Tags": [
+                "Casual",
+                "Survival",
+                "Port"
+            ],
+
+            "Base": "FruitNinja",
+            "Index": "index.html"
+        },
+        {
+            "Title": "Fruit Ninja",
+            "Icon": "FruitNinja/Icon.jpg",
+            "Author": "Halfbrick",
+            "Tags": [
+                "Casual",
+                "Survival",
+                "Port"
+            ],
+
+            "Base": "FruitNinja",
+            "Index": "index.html"
         }
     ]
 }
