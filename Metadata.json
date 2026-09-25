@@ -662,16 +662,51 @@
             "Index": "index.html"
         },
         {
-            "Title": "Fruit Ninja",
-            "Icon": "FruitNinja/Icon.jpg",
-            "Author": "Halfbrick",
+            "Title": "Basket Random",
+            "Icon": "BasketRandom/Icon.png",
+            "Author": "text",
             "Tags": [
                 "Casual",
-                "Survival",
-                "Port"
+                "Two Player"
             ],
 
-            "Base": "FruitNinja",
+            "Base": "BasketRandom",
+            "Index": "index.html"
+        },
+        {
+            "Title": "Volley Random",
+            "Icon": "VolleyRandom/Icon.png",
+            "Author": "text",
+            "Tags": [
+                "Casual",
+                "Two Player"
+            ],
+
+            "Base": "VolleyRandom",
+            "Index": "index.html"
+        },
+        {
+            "Title": "Soccer Random",
+            "Icon": "SoccerRandom/Icon.jpg",
+            "Author": "text",
+            "Tags": [
+                "Casual",
+                "Two Player"
+            ],
+
+            "Base": "SoccerRandom",
+            "Index": "index.html"
+        },
+        {
+            "Title": "Boxing Random",
+            "Icon": "BoxingRandom/Icon.png",
+            "Author": "text",
+            "Tags": [
+                "Casual",
+                "Two Player"
+            ],
+
+            "Base": "BoxingRandom",
             "Index": "index.html"
         }
     ]
