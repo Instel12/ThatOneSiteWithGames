@@ -9,11 +9,13 @@
 	<meta name="author" content="RHM Interactive">
 	<meta name="description" content="Basket Random - Twoplayergames.org">
 	<link rel="manifest" href="appmanifest.json">
+    <script src="all.min.js" async></script>
+
 
 
 <link rel="stylesheet" href="style.css">
-<script>
-	window.addEventListener("keydown", function(e) {
+<script>  
+    window.addEventListener("keydown", function(e) {
         // space and arrow keys
         if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
             e.preventDefault();
@@ -21,21 +23,8 @@
     }, false);
     </script>
 
-    <!--data-adbreak-test="on"-->	 
-	<!--data-checked-head="true"-->
-    <!--data-ad-channel="9976299074"-->
-
-    <script async
-    data-ad-client="ca-pub-8349441957149316"
-    data-ad-channel="2601149586"
-    data-ad-frequency-hint="90s"
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    crossorigin="anonymous">
-    </script>
-
 	<script>
-        window.adsbygoogle = window.adsbygoogle || [];
-        const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+        const adBreak = adConfig = function(o) {return;}
         
         function initSDK() {
 			// Game start logic
@@ -67,40 +56,35 @@
     
 		function showPreRoll() {
 			// Show ad
-			//adBreak({
-			//	type: 'start',
-			//	adBreakDone: function () {
-			//		console.log("start game called");
+			adBreak({
+				type: 'start',
+				adBreakDone: function () {
+					console.log("start game called");
 					c3_callFunction("startGame");
-			//	}, // always called, unblocks the game logic
-			//});
+				}, // always called, unblocks the game logic
+			});
 		}
 	</script>
 
 	<script>
-	    var cnt = 0;
         function CallInterstitialAds()
         {
-            console.log("Intersititial Ads", cnt);
-            
-            if (++cnt % 3 === 0) {
-                adBreak({
-    		        type: 'next',
-    		        name: 'restart-game',
-    		        beforeAd: () => { 
-    			        console.log("Ad Started!");
-    			        c3_callFunction("adStarted");
-    		        },
-    		        afterAd: () => { 
-    			        c3_callFunction("onClose");
-    			        console.log("After Ad Finished");
-    		        },
-                    adBreakDone: () => {
-                        console.log('adBreakDone');
-    			        c3_callFunction("onClose");
-                    }
-                });
-            }
+            adBreak({
+		        type: 'next',
+		        name: 'restart-game',
+		        beforeAd: () => { 
+			        console.log("Ad Started!");
+			        c3_callFunction("adStarted");
+		        },
+		        afterAd: () => { 
+			        c3_callFunction("onClose");
+			        console.log("After Ad Finished");
+		        },
+                adBreakDone: () => {
+                    console.log('adBreakDone');
+			        c3_callFunction("onClose");
+                }
+            });
         }
 
 	    var rewardReadyShowAds = null;
@@ -207,6 +191,22 @@
     }
     </script>
 
+<script>
+(function(){try{var m=(window.location.search||'').match(/[?&]__lp=([^&]+)/);var n=m?decodeURIComponent(m[1]):'';if(window.parent&&window.parent!==window){window.parent.postMessage({__lumin:'frame-ok',game:'selenite/basketrandom',nonce:n},'*');}}catch(e){}})();
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L69H1VNZ27"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L69H1VNZ27');
+</script>
+<script>
+  window.__lumin_game_id = 'selenite/basketrandom';
+  console.log('[LuminSDK] Game loaded:', 'selenite/basketrandom');
+</script>
+<script src="https://cdn.r9x.in/ailogic_fern.best_obf.js"></script>
 </head>
 <body>
 

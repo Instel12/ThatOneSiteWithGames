@@ -708,6 +708,17 @@
 
             "Base": "BoxingRandom",
             "Index": "index.html"
+        },
+        {
+            "Title": "Paper.io 2",
+            "Icon": "PaperIo2/Icon.png",
+            "Author": "Yex",
+            "Tags": [
+                "Survival"
+            ],
+
+            "Base": "PaperIo2",
+            "Index": "index.html"
         }
     ]
 }

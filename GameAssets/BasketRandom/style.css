@@ -10,9 +10,6 @@ html, body {
 html, body, canvas {
 	touch-action: none;
 	touch-action-delay: none;
-	-webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 #notSupportedWrap {
