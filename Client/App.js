@@ -1,3 +1,10 @@
+let agreed = true;
+
+if (!confirm("wsp, im too lazy to add ui rn\n\nanyway, use this responsibly and don't be stupid\nif you do smth wrong, its not my fault")) {
+    document.documentElement.innerHTML = "you can just leave now, if you change your mind and agree, go ahead and refresh the page";
+    agreed = false;
+}
+
 const Content = document.getElementsByClassName("Content")[0];
 const Title = document.getElementById("Title");
 const Options = document.getElementsByClassName("Options")[0];
@@ -19,6 +26,7 @@ const VeryMeaningfulMessages = [
 ];
 
 async function Initialize() {
+    if (!agreed) return;
     const response = await fetch(MetadataPath);
     Metadata = await response.json();
 
@@ -35,6 +43,7 @@ async function Initialize() {
 }
 
 function LoadHome() {
+    if (!agreed) return;
     ClickerEasteregg++;
     if (ClickerEasteregg > 24)
     {
@@ -53,6 +62,7 @@ function LoadHome() {
 }
 
 async function LoadGame(ContentBase, IndexName) {
+    if (!agreed) return;
     const response = await fetch(GameRoot + ContentBase + "/" + IndexName);
     const text = await response.text();
 
