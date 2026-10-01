@@ -5,6 +5,8 @@ if (!confirm("wsp, im too lazy to add ui rn\n\nanyway, use this responsibly and 
     agreed = false;
 }
 
+const PageContent = document.documentElement.innerHTML;
+
 const Content = document.getElementsByClassName("Content")[0];
 const Title = document.getElementById("Title");
 const Options = document.getElementsByClassName("Options")[0];
@@ -22,7 +24,8 @@ const VeryMeaningfulMessages = [
     `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "I want my baby back baby back baby back I want my baby back baby back baby back CHILLIS BABY BACK RIBS barbaque sauce",
     "oh how i hate shockwaves 🤓",
-    "999"
+    "999",
+    "ngl, ur pretty cool"
 ];
 
 async function Initialize() {
@@ -36,6 +39,8 @@ async function Initialize() {
         }
     }
     
+    Title.innerText = "[ TOSWG ]";
+
     LoadHome();
 
     console.log(Metadata["Games"].length + " games loaded")
@@ -47,7 +52,7 @@ function LoadHome() {
     ClickerEasteregg++;
     if (ClickerEasteregg > 24)
     {
-        Title.innerText = `TOSWG [ ${ClickerEasteregg-25} ]`;
+        Title.innerText = `[ TOSWG ] [ ${ClickerEasteregg-25} ]`;
         if (ClickerEasteregg == 25) alert("Do you want a clicker?");
     }
 
@@ -57,7 +62,8 @@ function LoadHome() {
         AddGameTemp(Metadata["Games"][i].Base, Metadata["Games"][i].Index, Metadata["Games"][i].Title, Metadata["Games"][i].Icon)
     }
 
-    Options.innerHTML = "";
+    if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? "<a onclick='alert(`Temporary links may shut down without notice!`)'>[ Temporary Link ]</a>" : "";
+    else Options.innerHTML = "";
     Content.innerHTML = TempContent;
 }
 
@@ -76,7 +82,7 @@ async function LoadGame(ContentBase, IndexName) {
 
     if (ClickerEasteregg < 25) ClickerEasteregg = 0;
 
-    Options.innerHTML = "<a onclick='document.getElementById(`RealIframe`).requestFullscreen();'>Fullscreen</a>";
+    Options.innerHTML = "<a onclick='document.getElementById(`RealIframe`).requestFullscreen();'>[ Fullscreen ]</a>";
     Content.innerHTML = `<iframe id="RealIframe" srcdoc="${finalText.replace(/"/g, '&quot;')}"></iframe>`;
 }
 
@@ -86,6 +92,14 @@ function AddGameTemp(ContentBase, IndexName, Title, Icon){
     <img src="${GameRoot + Icon}">
     <div>${Title}</div>
 </div>`;
+}
+
+function CloakSite() { // ill use this later
+    const NewTab = window.open("about:blank", "_blank");
+    
+    NewTab.document.open();
+    NewTab.document.write(PageContent);
+    NewTab.document.close();
 }
 
 window.onload = ()=> Initialize();
