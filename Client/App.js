@@ -76,8 +76,8 @@ async function LoadGame(ContentBase, IndexName) {
 
     if (ClickerEasteregg < 25) ClickerEasteregg = 0;
 
-    Options.innerHTML = "<a onclick='Content.requestFullscreen();'>Fullscreen</a>";
-    Content.innerHTML = `<iframe srcdoc="${finalText.replace(/"/g, '&quot;')}"></iframe>`;
+    Options.innerHTML = "<a onclick='document.getElementById(`RealIframe`).requestFullscreen();'>Fullscreen</a>";
+    Content.innerHTML = `<iframe id="RealIframe" srcdoc="${finalText.replace(/"/g, '&quot;')}"></iframe>`;
 }
 
 function AddGameTemp(ContentBase, IndexName, Title, Icon){
