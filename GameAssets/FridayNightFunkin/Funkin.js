@@ -150271,7 +150271,7 @@ lime_system_System.load = function(library,method,args,lazy) {
 };
 lime_system_System.openFile = function(path) {
 	if(path != null) {
-		window.open(path,"_blank");
+		// window.open(path,"_blank");
 	}
 };
 lime_system_System.openURL = function(url,target) {
@@ -150279,7 +150279,7 @@ lime_system_System.openURL = function(url,target) {
 		target = "_blank";
 	}
 	if(url != null) {
-		window.open(url,target);
+		// window.open(url,target);
 	}
 };
 lime_system_System.getHint = function(key) {
@@ -244565,7 +244565,7 @@ io_newgrounds_NG.prototype = $extend(io_newgrounds_NGLite.prototype,{
 		}
 	}
 	,openPassportHelper: function(url) {
-		window.open(url,"_blank");
+		// window.open(url,"_blank");
 	}
 	,onPassportUrlOpen: function() {
 		this.dispatchPassportCallback();
