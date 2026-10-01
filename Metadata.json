@@ -719,6 +719,17 @@
 
             "Base": "PaperIo2",
             "Index": "index.html"
+        },
+        {
+            "Title": "2048",
+            "Icon": "2048/Icon.png",
+            "Author": "Dao Cloud",
+            "Tags": [
+                "Puzzle"
+            ],
+
+            "Base": "2048",
+            "Index": "index.html"
         }
     ]
 }
