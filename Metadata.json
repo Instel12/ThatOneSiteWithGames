@@ -189,7 +189,7 @@
             
             "Title": "Minecraft 1.5.2",
             "Icon": "Minecraft152/Icon.png",
-            "Author": "Mojang",
+            "Author": "lax1dude, Mojang",
             "Tags": [
                 "Casual",
                 "Sandbox",
@@ -205,7 +205,7 @@
             
             "Title": "Minecraft 1.8.8",
             "Icon": "Minecraft188/Icon.png",
-            "Author": "Mojang",
+            "Author": "lax1dude, Mojang",
             "Tags": [
                 "Casual",
                 "Sandbox",
@@ -221,7 +221,7 @@
             
             "Title": "Minecraft 1.12.2",
             "Icon": "Minecraft1122/Icon.png",
-            "Author": "Mojang",
+            "Author": "lax1dude, Mojang",
             "Tags": [
                 "Casual",
                 "Sandbox",
@@ -855,6 +855,19 @@
             ],
 
             "Base": "2048",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Five Nights at Winston's",
+            "Icon": "FiveNightsAtWinstons/Icon.jpg",
+            "Author": "lax1dude",
+            "Tags": [
+                "Horror"
+            ],
+
+            "Base": "FiveNightsAtWinstons",
             "Index": "index.html"
         }
     ]
