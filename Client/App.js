@@ -59,7 +59,7 @@ function LoadHome() {
     Content.textContent = "hey, man"
     TempContent = "";
     for (var i = 0; Metadata["Games"].length > i; i++) {
-        AddGameTemp(Metadata["Games"][i].Base, Metadata["Games"][i].Index, Metadata["Games"][i].Title, Metadata["Games"][i].Icon)
+        if (!Metadata["Games"][i].Unlisted) AddGameTemp(Metadata["Games"][i].Base, Metadata["Games"][i].Index, Metadata["Games"][i].Title, Metadata["Games"][i].Icon)
     }
 
     if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? "<a onclick='alert(`Temporary links may shut down without notice!`)'>[ Temporary Link ]</a>" : "";

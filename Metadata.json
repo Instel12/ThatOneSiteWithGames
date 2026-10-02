@@ -1,6 +1,10 @@
 {
+            "Unlisted": false,
+            
     "SpoofThings": [
         {
+            "Unlisted": false,
+            
             "Title": "Home - Google Drive",
             "Favicon": "https://ssl.gstatic.com/docs/doclist/images/drive_favicon_2026_32dp.png"
         }
@@ -8,6 +12,8 @@
 
     "Games": [
         {
+            "Unlisted": false,
+            
             "Title": "Retrobowl",
             "Icon": "Retrobowl/Icon.png",
             "Author": "New Star Games",
@@ -19,6 +25,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Retrobowl College",
             "Icon": "RetrobowlCollege/Icon.png",
             "Author": "New Star Games",
@@ -30,6 +38,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Retrobowl MVP",
             "Icon": "RetrobowlMVP/Icon.png",
             "Author": "New Star Games",
@@ -41,6 +51,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "OvO",
             "Icon": "OvO/Icon.png",
             "Author": "Dedra Games",
@@ -52,6 +64,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "OvO 2",
             "Icon": "OvO2/Icon.png",
             "Author": "Dedra Games",
@@ -63,6 +77,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Dadish",
             "Icon": "Dadish/Icon.png",
             "Author": "Tom K. Young",
@@ -74,6 +90,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Dadish 2",
             "Icon": "Dadish2/Icon.png",
             "Author": "Tom K. Young",
@@ -85,6 +103,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Dadish 3",
             "Icon": "Dadish3/Icon.png",
             "Author": "Tom K. Young",
@@ -96,6 +116,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Daily Dadish",
             "Icon": "DailyDadish/Icon.png",
             "Author": "Tom K. Young",
@@ -107,6 +129,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Cookie Clicker",
             "Icon": "CookieClicker/Icon.png",
             "Author": "Ortiel",
@@ -119,6 +143,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Ruffle",
             "Icon": "Ruffle/Icon.png",
             "Author": "Mike Welsh (Many other contributers)",
@@ -131,6 +157,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Plants Vs Zombies",
             "Icon": "PlantsVsZombies/Icon.png",
             "Author": "Pop Cap Games",
@@ -143,6 +171,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Polytrack",
             "Icon": "Polytrack/Icon.png",
             "Author": "Kodub",
@@ -155,6 +185,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Minecraft 1.5.2",
             "Icon": "Minecraft152/Icon.png",
             "Author": "Mojang",
@@ -169,6 +201,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Minecraft 1.8.8",
             "Icon": "Minecraft188/Icon.png",
             "Author": "Mojang",
@@ -183,6 +217,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Minecraft 1.12.2",
             "Icon": "Minecraft1122/Icon.png",
             "Author": "Mojang",
@@ -197,6 +233,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Friday Night Funkin",
             "Icon": "FridayNightFunkin/Icon.png",
             "Author": "Funkin' Crew",
@@ -209,6 +247,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Pizza Tower",
             "Icon": "PizzaTower/Icon.png",
             "Author": "Tour De Pizza",
@@ -221,6 +261,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Universal Paperclips",
             "Icon": "UniversalPaperclips/Icon.png",
             "Author": "Frank Lantz",
@@ -233,6 +275,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Subway Surfers",
             "Icon": "SubwaySurfers/Icon.png",
             "Author": "SYBO Games",
@@ -245,6 +289,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloxorz",
             "Icon": "Bloxorz/Icon.png",
             "Author": "Damien Clarke",
@@ -257,6 +303,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloons TD 1",
             "Icon": "BloonsTD1/Icon.png",
             "Author": "Ninja Kiwi",
@@ -269,6 +317,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloons TD 2",
             "Icon": "BloonsTD2/Icon.png",
             "Author": "Ninja Kiwi",
@@ -281,6 +331,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloons TD 3",
             "Icon": "BloonsTD3/Icon.png",
             "Author": "Ninja Kiwi",
@@ -293,6 +345,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloons TD 4",
             "Icon": "BloonsTD4/Icon.png",
             "Author": "Ninja Kiwi",
@@ -305,6 +359,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bloons TD 5",
             "Icon": "BloonsTD5/Icon.png",
             "Author": "Ninja Kiwi",
@@ -317,6 +373,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Cut the Rope",
             "Icon": "CutTheRope/Icon.png",
             "Author": "Ninja Kiwi",
@@ -328,6 +386,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Tiny Fishing",
             "Icon": "TinyFishing/Icon.png",
             "Author": "Coolmath Games",
@@ -339,6 +399,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bitlife",
             "Icon": "Bitlife/Icon.png",
             "Author": "Candywriter LLC",
@@ -350,6 +412,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Slope",
             "Icon": "Slope/Icon.png",
             "Author": "Y8 Games",
@@ -361,6 +425,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Bakeria",
             "Icon": "PapasBakeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -373,6 +439,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Cheeseria",
             "Icon": "PapasCheeseria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -385,6 +453,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Donuteria",
             "Icon": "PapasDonuteria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -397,6 +467,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Freezeria",
             "Icon": "PapasFreezeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -409,6 +481,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Pancakeria",
             "Icon": "PapasPancakeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -421,6 +495,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Pastacomia",
             "Icon": "PapasPastacomia/Icon.jpg",
             "Author": "Flipline Studios",
@@ -433,6 +509,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Pizzeria",
             "Icon": "PapasPizzeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -445,6 +523,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Scooperia",
             "Icon": "PapasScooperia/Icon.jpg",
             "Author": "Flipline Studios",
@@ -457,6 +537,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Sushiria",
             "Icon": "PapasSushiria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -469,6 +551,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Wingeria",
             "Icon": "PapasWingeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -481,6 +565,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Papa's Hotdoggeria",
             "Icon": "PapasHotdoggeria/Icon.jpg",
             "Author": "Flipline Studios",
@@ -493,6 +579,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Bad Piggies",
             "Icon": "BadPiggies/Icon.png",
             "Author": "Rovio",
@@ -506,6 +594,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Gladihoppers",
             "Icon": "Gladihoppers/Icon.png",
             "Author": "Dreamon Studios",
@@ -517,6 +607,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Amazing Strange Rope Police",
             "Icon": "AmazingStrangeRopePolice/Icon.jpg",
             "Author": "HGames-ArtWorks",
@@ -528,6 +620,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Happy Wheels Demo",
             "Icon": "HappyWheelsDemo/Icon.png",
             "Author": "Total Jerk Face",
@@ -541,6 +635,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Doom",
             "Icon": "Doom/Icon.jpg",
             "Author": "id Software",
@@ -553,6 +649,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Doom 2",
             "Icon": "Doom2/Icon.png",
             "Author": "id Software",
@@ -565,6 +663,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Geometry Dash Lite",
             "Icon": "GeometryDashLite/Icon.png",
             "Author": "Robtop",
@@ -577,6 +677,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Learn to Fly",
             "Icon": "LearnToFly/Icon.png",
             "Author": "Light Bringer Games",
@@ -589,6 +691,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Learn to Fly 2",
             "Icon": "LearnToFly2/Icon.png",
             "Author": "Light Bringer Games",
@@ -601,6 +705,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Learn to Fly 3",
             "Icon": "LearnToFly3/Icon.png",
             "Author": "Light Bringer Games",
@@ -613,6 +719,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Learn to Fly Idle",
             "Icon": "LearnToFlyIdle/Icon.png",
             "Author": "Light Bringer Games",
@@ -625,6 +733,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Snow Rider",
             "Icon": "SnowRider/Icon.png",
             "Author": "GameBiz",
@@ -636,6 +746,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Survival Race",
             "Icon": "SurvivalRace/Icon.png",
             "Author": "Brain Massage",
@@ -649,6 +761,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Fruit Ninja",
             "Icon": "FruitNinja/Icon.jpg",
             "Author": "Halfbrick",
@@ -662,6 +776,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "Basket Random",
             "Icon": "BasketRandom/Icon.png",
             "Author": "text",
@@ -674,6 +790,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": true,
+            
             "Title": "Volley Random",
             "Icon": "VolleyRandom/Icon.png",
             "Author": "text",
@@ -686,6 +804,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": true,
+            
             "Title": "Soccer Random",
             "Icon": "SoccerRandom/Icon.jpg",
             "Author": "text",
@@ -698,6 +818,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": true,
+            
             "Title": "Boxing Random",
             "Icon": "BoxingRandom/Icon.png",
             "Author": "text",
@@ -710,6 +832,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": true,
+            
             "Title": "Paper.io 2",
             "Icon": "PaperIo2/Icon.png",
             "Author": "Yex",
@@ -721,6 +845,8 @@
             "Index": "index.html"
         },
         {
+            "Unlisted": false,
+            
             "Title": "2048",
             "Icon": "2048/Icon.png",
             "Author": "Dao Cloud",
