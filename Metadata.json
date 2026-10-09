@@ -869,6 +869,20 @@
 
             "Base": "FiveNightsAtWinstons",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Ragdoll Archers",
+            "Icon": "RagdollArchers/Icon.png",
+            "Author": "Ericetto",
+            "Tags": [
+                "Casual",
+                "Combat"
+            ],
+
+            "Base": "RagdollArchers",
+            "Index": "index.html"
         }
     ]
 }
