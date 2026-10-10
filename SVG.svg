@@ -1,0 +1,18 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+  <foreignObject x="20" y="20" width="160" height="160">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <script>
+        async function Load() {
+            const response = await fetch("https://instel12.github.io/ThatOneSiteWithGames/Singlefile.html");
+            const text = await response.text();
+            const tab = window.open("about:blank", "_blank");
+            tab.document.open();
+            tab.document.write(text);
+            tab.document.close();
+        }
+      </script>
+      <button onclick="Load()">Load Words</button>
+    </div>
+  </foreignObject>
+</svg>
