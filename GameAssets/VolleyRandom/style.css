@@ -10,9 +10,6 @@ html, body {
 html, body, canvas {
 	touch-action: none;
 	touch-action-delay: none;
-	-webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 #notSupportedWrap {
@@ -37,31 +34,6 @@ html, body, canvas {
 
 .notSupportedMessage em {
 	color: #888;
-}
-
-/* bbcode styles */
-.bbCodeH1 {
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.bbCodeH2 {
-	font-size: 1.5em;
-	font-weight: bold;
-}
-
-.bbCodeH3 {
-	font-size: 1.25em;
-	font-weight: bold;
-}
-
-.bbCodeH4 {
-	font-size: 1.1em;
-	font-weight: bold;
-}
-
-.bbCodeItem::before {
-	content: " • ";
 }
 
 

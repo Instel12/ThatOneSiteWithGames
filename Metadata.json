@@ -883,6 +883,171 @@
 
             "Base": "RagdollArchers",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Moto X3M",
+            "Icon": "MotoX3M/Icon.png",
+            "Author": "MadPuffers",
+            "Tags": [
+                "Casual",
+                "Cars"
+            ],
+
+            "Base": "MotoX3M",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Block Blast",
+            "Icon": "BlockBlast/Icon.png",
+            "Author": "Hungry Studios",
+            "Tags": [
+                "Casual",
+                "Puzzle"
+            ],
+
+            "Base": "BlockBlast",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Jelly Truck",
+            "Icon": "JellyTruck/Icon.png",
+            "Author": "Gametornado",
+            "Tags": [
+                "Casual",
+                "Cars"
+            ],
+
+            "Base": "JellyTruck",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "The Impossible Quiz",
+            "Icon": "TheImpossibleQuiz1/Icon.png",
+            "Author": "Splapp Me Do",
+            "Tags": [
+                "Flash",
+                "Puzzle"
+            ],
+
+            "Base": "TheImpossibleQuiz1",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "The Impossible Quiz 2",
+            "Icon": "TheImpossibleQuiz2/Icon.png",
+            "Author": "Splapp Me Do",
+            "Tags": [
+                "Flash",
+                "Puzzle"
+            ],
+
+            "Base": "TheImpossibleQuiz2",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Big Tower Tiny Square",
+            "Icon": "BigTowerTinySquare/Icon.png",
+            "Author": "EvilObjective",
+            "Tags": [
+                "Platformer"
+            ],
+
+            "Base": "BigTowerTinySquare",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Wordle Unlimited",
+            "Icon": "WordleUnlimited/Icon.png",
+            "Author": "Newyork Times, Instel12 and ChatGPT (im not a skid anymore lol)",
+            "Tags": [
+                "Puzzle"
+            ],
+
+            "Base": "WordleUnlimited",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Idle Breakout",
+            "Icon": "IdleBreakout/Icon.png",
+            "Author": "Kodiqi",
+            "Tags": [
+                "Casual"
+            ],
+
+            "Base": "IdleBreakout",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Five Nights at Freddy's",
+            "Icon": "FiveNightsAtFreddys/Icon.png",
+            "Author": "Scott Cawthon",
+            "Tags": [
+                "Port",
+                "Horror"
+            ],
+
+            "Base": "FiveNightsAtFreddys",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Five Nights at Freddy's 2",
+            "Icon": "FiveNightsAtFreddys2/Icon.png",
+            "Author": "Scott Cawthon",
+            "Tags": [
+                "Port",
+                "Horror"
+            ],
+
+            "Base": "FiveNightsAtFreddys2",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Five Nights at Freddy's 3",
+            "Icon": "FiveNightsAtFreddys3/Icon.png",
+            "Author": "Scott Cawthon",
+            "Tags": [
+                "Port",
+                "Horror"
+            ],
+
+            "Base": "FiveNightsAtFreddys3",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Five Nights at Freddy's 4",
+            "Icon": "FiveNightsAtFreddys4/Icon.png",
+            "Author": "Scott Cawthon",
+            "Tags": [
+                "Port",
+                "Horror"
+            ],
+
+            "Base": "FiveNightsAtFreddys4",
+            "Index": "index.html"
         }
     ]
 }
