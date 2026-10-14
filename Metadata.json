@@ -887,6 +887,21 @@
         {
             "Unlisted": false,
             
+            "Title": "Ragdoll Hit",
+            "Icon": "RagdollHit/Icon.png",
+            "Author": "Ericetto",
+            "Tags": [
+                "Casual",
+                "Combat",
+                "Two Player"
+            ],
+
+            "Base": "RagdollHit",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
             "Title": "Moto X3M",
             "Icon": "MotoX3M/Icon.png",
             "Author": "MadPuffers",
@@ -1047,6 +1062,21 @@
             ],
 
             "Base": "FiveNightsAtFreddys4",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Drive Mad",
+            "Icon": "DriveMad/Icon.jpg",
+            "Author": "Scott Cawthon",
+            "Tags": [
+                "Casual",
+                "Cars",
+                "Platformer"
+            ],
+
+            "Base": "DriveMad",
             "Index": "index.html"
         }
     ]
