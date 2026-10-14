@@ -10,7 +10,7 @@ body {
     color: #fff;
     font-family: monospace;
 
-    background-image: linear-gradient(to right, #181818 1px, transparent 1px), linear-gradient(to bottom, #181818 1px, transparent 1px);
+    background-image: linear-gradient(to right, #2b2b2b 1px, transparent 1px), linear-gradient(to bottom, #2b2b2b 1px, transparent 1px);
     background-size: 2vw 2vw;
     /* background-attachment: fixed; */
 }
@@ -48,10 +48,6 @@ a {
 }
 
 .Content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 24px;
-
     width: 100%;
     min-height: calc(100vh - 3vh);
 
@@ -59,6 +55,12 @@ a {
     padding-top: calc(3vh + 15px);
 
     box-sizing: border-box;
+}
+
+.GridLayout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 24px;
 }
 
 .game {
@@ -99,4 +101,37 @@ a {
     height: calc(100vh - 3vh - 30px);
 
     border: none;
+}
+
+.Warning {
+    min-height: calc(100vh - 3vh - 15px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+
+.InfoUI {
+    min-height: calc(100vh - 3vh - 15px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+
+.InfoUI button {
+    width: 20%;
+}
+
+button {
+    font-family: monospace;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0.3%;
 }

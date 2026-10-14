@@ -1,9 +1,4 @@
-let agreed = true;
-
-if (!confirm("wsp, im too lazy to add ui rn\n\nanyway, use this responsibly and don't be stupid\nif you do smth wrong, its not my fault")) {
-    document.documentElement.innerHTML = "you can just leave now, if you change your mind and agree, go ahead and refresh the page";
-    agreed = false;
-}
+let Agreed = false;
 
 const PageContent = document.documentElement.innerHTML;
 
@@ -29,7 +24,6 @@ const VeryMeaningfulMessages = [
 ];
 
 async function Initialize() {
-    if (!agreed) return;
     const response = await fetch(MetadataPath);
     Metadata = await response.json();
 
@@ -41,14 +35,38 @@ async function Initialize() {
     
     Title.innerText = "[ TOSWG ]";
 
-    LoadHome();
+    LoadWarning();
 
     console.log(Metadata["Games"].length + " games loaded")
     console.log(VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)]);
 }
 
+function LoadWarning() { // ignore that this is kinda cursed looking
+    Content.innerHTML = `
+        <div class="InfoUI">
+            <h1 style="color:yellow;">[ Warning! ]</h1>
+            NOTHING that happens related to this service is on me.
+            <br>
+            Also, please obey rules, however, I can't really stop you.
+            <p></p>
+            <button onclick="Agreed = true; LoadHome();">Agree</button>
+            <button onclick="LoadDisagree();">Disagree</button>
+        </div>
+    `;
+}
+
+function LoadDisagree() {
+    Content.innerHTML = `
+        <div class="InfoUI">
+            <h1 style="color:yellow;">[ Gochu ]</h1>
+            <p>If you change your mind later, you can come back and agree.</p>
+        </div>
+    `;
+}
+
 function LoadHome() {
-    if (!agreed) return;
+    if (!Agreed) return;
+
     ClickerEasteregg++;
     if (ClickerEasteregg > 24)
     {
@@ -62,13 +80,14 @@ function LoadHome() {
         if (!Metadata["Games"][i].Unlisted) AddGameTemp(Metadata["Games"][i].Base, Metadata["Games"][i].Index, Metadata["Games"][i].Title, Metadata["Games"][i].Icon)
     }
 
+    Content.classList.add("GridLayout");
     if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? "<a onclick='alert(`Temporary links may shut down without notice!`)'>[ Temporary Link ]</a>" : "";
     else Options.innerHTML = "";
     Content.innerHTML = TempContent;
 }
 
 async function LoadGame(ContentBase, IndexName) {
-    if (!agreed) return;
+    if (!Agreed) return;
     const response = await fetch(GameRoot + ContentBase + "/" + IndexName);
     const text = await response.text();
 
