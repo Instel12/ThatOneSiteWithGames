@@ -1,5 +1,3 @@
-let Agreed = false;
-
 const PageContent = document.documentElement.innerHTML;
 
 const Content = document.getElementsByClassName("Content")[0];
@@ -9,6 +7,7 @@ const Options = document.getElementsByClassName("Options")[0];
 let TempContent = "";
 let Tags = [];
 let Metadata = [];
+let Agreed = false;
 
 let ClickerEasteregg = 0;
 
