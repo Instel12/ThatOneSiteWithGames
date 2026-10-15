@@ -17,7 +17,7 @@ if (!localStorage.getItem("Ticket")) {
 const Ticket = localStorage.getItem("Ticket");
 let Visitors = -1;
 
-const BackendURL = "https://receivers-documented-facing-decisions.trycloudflare.com";
+const BackendURL = "https://embedded-competitors-bennett-beneficial.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
     "ngl ima take a nap lmk",
