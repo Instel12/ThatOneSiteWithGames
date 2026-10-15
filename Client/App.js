@@ -94,7 +94,7 @@ function LoadHome() {
     }
 
     Content.classList.add("GridLayout");
-    if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? `[ ${Visitors} Users ] <a onclick='alert("Temporary links may shut down without notice!")'>[ Temporary Link ]</a>` : `[ ${Visitors} Users ]`;
+    if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? `[ ${Visitors} User${Visitors == 1 || Visitors == -1 ? "" : "s"} Online ] <a onclick='alert("Temporary links may shut down without notice!")'>[ Temporary Link ]</a>` : `[ ${Visitors} User${Visitors == 1 || Visitors == -1 ? "" : "s"} Online ]`;
     else Options.innerHTML = "";
     Content.innerHTML = TempContent;
 }
