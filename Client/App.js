@@ -11,6 +11,14 @@ let Agreed = false;
 
 let ClickerEasteregg = 0;
 
+if (!localStorage.getItem("Ticket")) {
+    localStorage.setItem("Ticket", crypto.randomUUID());
+}
+const Ticket = localStorage.getItem("Ticket");
+let Visitors = -1;
+
+const BackendURL = "https://receivers-documented-facing-decisions.trycloudflare.com";
+
 const VeryMeaningfulMessages = [
     "ngl ima take a nap lmk",
     "who do you think you are, i am",
@@ -35,6 +43,9 @@ async function Initialize() {
     Title.innerText = "[ TOSWG ]";
 
     LoadWarning();
+
+    RenewVisitation();
+    setInterval(RenewVisitation, 20000)
 
     console.log(Metadata["Games"].length + " games loaded")
     console.log(VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)]);
@@ -80,7 +91,7 @@ function LoadHome() {
     }
 
     Content.classList.add("GridLayout");
-    if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? "<a onclick='alert(`Temporary links may shut down without notice!`)'>[ Temporary Link ]</a>" : "";
+    if (typeof TemporaryLink !== "undefined") Options.innerHTML = TemporaryLink ? `[ ${Visitors} Users ] <a onclick='alert("Temporary links may shut down without notice!")'>[ Temporary Link ]</a>` : `[ ${Visitors} Users ]`;
     else Options.innerHTML = "";
     Content.innerHTML = TempContent;
 }
@@ -118,6 +129,21 @@ function CloakSite() { // ill use this later
     NewTab.document.open();
     NewTab.document.write(PageContent);
     NewTab.document.close();
+}
+
+async function RenewVisitation() {
+    const response = await fetch(BackendURL + "/Visit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            Session: Ticket
+        })
+    });
+
+    const data = await response.json();
+    Visitors = data.online;
 }
 
 window.onload = ()=> Initialize();
