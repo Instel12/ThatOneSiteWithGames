@@ -27,10 +27,13 @@ const VeryMeaningfulMessages = [
     "I want my baby back baby back baby back I want my baby back baby back baby back CHILLIS BABY BACK RIBS barbaque sauce",
     "oh how i hate shockwaves 🤓",
     "999",
-    "ngl, ur pretty cool"
+    "ngl, ur pretty cool",
+    "\"when haters see me winning, they just hiperventalate. they always try to stop me but i never hesitate. just follow all your dreams and when you reach them, celebrate. thats the only way to truely make a hater suffocate.\""
 ];
 
 async function Initialize() {
+    Options.innerHTML = "";
+
     const response = await fetch(MetadataPath);
     Metadata = await response.json();
 
