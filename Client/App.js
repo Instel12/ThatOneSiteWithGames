@@ -11,13 +11,13 @@ let Agreed = false;
 
 let ClickerEasteregg = 0;
 
-if (!localStorage.getItem("Ticket")) {
-    localStorage.setItem("Ticket", crypto.randomUUID());
+if (!localStorage.getItem("TOSWG Ticket")) {
+    localStorage.setItem("TOSWG Ticket", crypto.randomUUID());
 }
-const Ticket = localStorage.getItem("Ticket");
+const Ticket = localStorage.getItem("TOSWG Ticket");
 let Visitors = -1;
 
-const BackendURL = "https://embedded-competitors-bennett-beneficial.trycloudflare.com";
+const BackendURL = "https://request-alexandria-cingular-adopt.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
     "ngl ima take a nap lmk",
@@ -147,6 +147,31 @@ async function RenewVisitation() {
 
     const data = await response.json();
     Visitors = data.online;
+}
+
+function download(filename, text) { // credits to @johnpyp on stack overflow
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+function DumpStorage() {
+    const data = {};
+
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        data[key] = localStorage.getItem(key);
+    }
+
+    const json = JSON.stringify(data, null, 2);
+    download("TOSWG Backup.json", json);
 }
 
 window.onload = ()=> Initialize();
