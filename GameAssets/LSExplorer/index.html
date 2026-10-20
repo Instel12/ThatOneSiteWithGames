@@ -1,0 +1,149 @@
+<style>
+    body{
+        background-color: white;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #000000;
+        padding: 8px;
+    }
+
+    input {
+        width: 80%;
+        box-sizing: border-box;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .key-name {
+        width: 180px;
+    }
+</style>
+
+<center>
+    <h1>LS Explorer</h1>
+    <button onclick="DumpStorage();">Download Backup</button>
+    <button onclick="LoadStorage();">Load Backup</button>
+    <p>
+</center>
+<table id="storageTable">
+    <tr>
+        <th>Key</th>
+        <th>Value</th>
+    </tr>
+</table>
+<script>
+    function RefreshTable() {
+        const table = document.getElementById("storageTable");
+        table.innerHTML = "<tr><th>Key</th><th>Value</th></tr>";
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+
+            if (key == "TOSWG Ticket") continue; // wouldnt want you messing with that
+
+            const row = table.insertRow();
+
+            const keyCell = row.insertCell();
+            keyCell.textContent = key;
+
+            const valueCell = row.insertCell();
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.style.width = "80%";
+            input.value = value;
+
+            const removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.style.width = "9.5%";
+
+            removeButton.onclick = function() {
+                if (confirm("Are you sure you wanna remove this key?")) {
+                    localStorage.removeItem(key);
+                    RefreshTable();
+                }
+            };
+
+            const saveButton = document.createElement("button");
+            saveButton.textContent = "Save";
+            saveButton.style.width = "9.5%";
+
+            saveButton.onclick = function() {
+                localStorage.setItem(key, input.value);
+                alert("Saved");
+                RefreshTable();
+            };
+
+            valueCell.appendChild(input);
+            valueCell.appendChild(removeButton);
+            valueCell.appendChild(saveButton);
+        }
+    }
+
+    function download(filename, text) { // credits to @johnpyp on stack overflow
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
+    function DumpStorage() {
+        const data = {};
+
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            data[key] = localStorage.getItem(key);
+        }
+
+        const json = JSON.stringify(data, null, 2);
+        
+        const date = new Date();
+        // idk why it doesnt do like 12:00 and instead it does 12_00 but all well
+        const formatted = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")} ${String(date.getHours()).padStart(2, "0")}:${String(date.getMinutes()).padStart(2, "0")}`;
+
+        download(`LS Explorer Backup (${formatted}).json`, json);
+    }
+
+    function LoadStorage() {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+
+        input.onchange = function () {
+            const file = input.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function () {
+                try {
+                    const data = JSON.parse(reader.result);
+
+                    for (const key in data) {
+                        localStorage.setItem(key, data[key]);
+                    }
+
+                    location.reload();
+                } catch (error) {
+                }
+            };
+
+            reader.readAsText(file);
+        };
+
+        input.click();
+    }
+
+    RefreshTable();
+</script>

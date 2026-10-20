@@ -1090,6 +1090,19 @@
 
             "Base": "DriveMad",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "LS Explorer",
+            "Icon": "LSExplorer/Icon.png",
+            "Author": "Instel",
+            "Tags": [
+                "Tools"
+            ],
+
+            "Base": "LSExplorer",
+            "Index": "index.html"
         }
     ]
 }
