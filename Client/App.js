@@ -20,14 +20,19 @@ let Visitors = -1;
 const BackendURL = "https://request-alexandria-cingular-adopt.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
+    // memes
     "ngl ima take a nap lmk",
     "who do you think you are, i am",
     "man, i just farted in the elevator",
-    `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "I want my baby back baby back baby back I want my baby back baby back baby back CHILLIS BABY BACK RIBS barbaque sauce",
     "oh how i hate shockwaves 🤓",
-    "999",
+
+    // my radnom thoughts
+    "hi",
+    "hey"
+    `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "ngl, ur pretty cool",
+    "999",
     "\"when haters see me winning, they just hiperventalate. they always try to stop me but i never hesitate. just follow all your dreams and when you reach them, celebrate. thats the only way to truely make a hater suffocate.\""
 ];
 
@@ -62,7 +67,7 @@ function LoadWarning() { // ignore that this is kinda cursed looking
             <br>
             Also, please obey rules, however, I can't really stop you.
             <p></p>
-            <button onclick="Agreed = true; LoadNickEh30();">Agree</button>
+            <button onclick="Agreed = true; LoadHome();">Agree</button>
             <button onclick="LoadDisagree();">Disagree</button>
             <br>
             <button onclick="LoadNickEh30(); Agreed = true;">Accept (With Nick Eh 30 Intro)</button>
