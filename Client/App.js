@@ -62,10 +62,23 @@ function LoadWarning() { // ignore that this is kinda cursed looking
             <br>
             Also, please obey rules, however, I can't really stop you.
             <p></p>
-            <button onclick="Agreed = true; LoadHome();">Agree</button>
+            <button onclick="Agreed = true; LoadNickEh30();">Agree</button>
             <button onclick="LoadDisagree();">Disagree</button>
+            <br>
+            <button onclick="LoadNickEh30(); Agreed = true;">Accept (With Nick Eh 30 Intro)</button>
         </div>
     `;
+}
+
+function LoadNickEh30() {
+    Content.innerHTML = `
+        <video src="nickeh30.mp4" autoplay style="width: 100%; height: 100%;"></video>
+    `;
+
+    const video = Content.querySelector("video");
+    video.onended = () => {
+        LoadHome();
+    };
 }
 
 function LoadDisagree() {
