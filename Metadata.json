@@ -185,7 +185,7 @@
         {
             "Unlisted": false,
             
-            "Title": "Polytrack",
+            "Title": "Polytrack [0.2.0]",
             "Icon": "Polytrack/Icon.png",
             "Author": "Kodub",
             "Tags": [
@@ -194,6 +194,20 @@
             ],
 
             "Base": "Polytrack",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Polytrack [0.5.2]",
+            "Icon": "Polytrack/Icon.png",
+            "Author": "Kodub, GN-Math",
+            "Tags": [
+                "Racing",
+                "Cars"
+            ],
+
+            "Base": "Polytrack/broken",
             "Index": "index.html"
         },
         {

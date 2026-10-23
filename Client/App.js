@@ -29,7 +29,7 @@ const VeryMeaningfulMessages = [
 
     // my radnom thoughts
     "hi",
-    "hey"
+    "hey",
     `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "ngl, ur pretty cool",
     "999",
