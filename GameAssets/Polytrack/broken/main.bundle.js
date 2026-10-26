@@ -27531,36 +27531,34 @@
         }
 
         function jT() {
-            // let e;
-            // switch (mu) {
-            //     case "kodub":
-            //     case "jest":
-            //         e = [/\.kodub\.com$/];
-            //         break;
-            //     case "electron":
-            //     case "capacitor":
-            //         return !1;
-            //     case "itch":
-            //         e = [/itch\.io$/, /itch\.zone$/];
-            //         break;
-            //     case "armorgames":
-            //         e = [/^19464\.cache\.armorgames\.com$/];
-            //         break;
-            //     case "gato":
-            //         e = [/^gato-files-prod\.s3\.amazonaws\.com$/];
-            //         break;
-            //     case "crazygames":
-            //         e = [/\.crazygames\.com$/];
-            //         break;
-            //     case "poki":
-            //         e = [/\.poki\.com$/, /\.poki-gdn\.com$/];
-            //         break;
-            //     case "y8":
-            //         e = [/\.y8\.com$/]
-            // }
-            // return !e.some((e => e.test(location.hostname)))
-
-            return false
+            let e;
+            switch (mu) {
+                case "kodub":
+                case "jest":
+                    e = [/\.kodub\.com$/];
+                    break;
+                case "electron":
+                case "capacitor":
+                    return !1;
+                case "itch":
+                    e = [/itch\.io$/, /itch\.zone$/];
+                    break;
+                case "armorgames":
+                    e = [/^19464\.cache\.armorgames\.com$/];
+                    break;
+                case "gato":
+                    e = [/^gato-files-prod\.s3\.amazonaws\.com$/];
+                    break;
+                case "crazygames":
+                    e = [/\.crazygames\.com$/];
+                    break;
+                case "poki":
+                    e = [/\.poki\.com$/, /\.poki-gdn\.com$/];
+                    break;
+                case "y8":
+                    e = [/\.y8\.com$/]
+            }
+            return !e.some((e => e.test(location.hostname)))
         }
 
         function QT() {
