@@ -17,23 +17,29 @@ if (!localStorage.getItem("TOSWG Ticket")) {
 const Ticket = localStorage.getItem("TOSWG Ticket");
 let Visitors = -1;
 
-const BackendURL = "https://request-alexandria-cingular-adopt.trycloudflare.com";
+const BackendURL = "https://suzuki-royal-mountains-intended.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
-    // memes
+    // 1738, aye
+    // I'm like
+    "hey",
+    "whats up",
+    "hello",
+
     "ngl ima take a nap lmk",
     "who do you think you are, i am",
-    "man, i just farted in the elevator",
-    "I want my baby back baby back baby back I want my baby back baby back baby back CHILLIS BABY BACK RIBS barbaque sauce",
     "oh how i hate shockwaves 🤓",
-
-    // my radnom thoughts
-    "hi",
-    "hey",
-    `that one guy in a song from 2 days ago's comments:\n"${new Date().getFullYear()}? Anyone?"\nlike, SHUT UP`,
     "ngl, ur pretty cool",
     "999",
-    "\"when haters see me winning, they just hiperventalate. they always try to stop me but i never hesitate. just follow all your dreams and when you reach them, celebrate. thats the only way to truely make a hater suffocate.\""
+    "please speed i need this",
+    "im top admin in the furry roleplay discord",
+    "i guess bro",
+    "what is a \"bool\"",
+    "ima say a really some really bad words: heck, stupid, darn, dang, idiot, shoot. i bet you didnt know i knew those words",
+    "stay sober",
+    "the following are unfunny to joke about:\n9/11\nWorld War II\nCancer\nDisabilities",
+    "funkey ehh",
+    "yuh"
 ];
 
 async function Initialize() {
@@ -117,7 +123,18 @@ function LoadHome() {
     Content.innerHTML = TempContent;
 }
 
+function SetLoading() {
+    Content.classList.remove("GridLayout");
+
+    Content.innerHTML = `<div class="InfoUI">
+        <h1 style="color:yellow;">[ Loading ]</h1>
+        <p>${VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)]}</p>
+        <p>Loading the base file. Please wait...</p>
+    </div>`;
+}
+
 async function LoadGame(ContentBase, IndexName) {
+    SetLoading();
     if (!Agreed) return;
     const response = await fetch(GameRoot + ContentBase + "/" + IndexName);
     const text = await response.text();

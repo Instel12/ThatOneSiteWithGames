@@ -193,7 +193,7 @@
                 "Cars"
             ],
 
-            "Base": "Polytrack",
+            "Base": "Polytrack/0.2.0",
             "Index": "index.html"
         },
         {
@@ -208,6 +208,20 @@
             ],
 
             "Base": "Polytrack/broken",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": true,
+            
+            "Title": "Polytrack [0.6.3] [Latest]",
+            "Icon": "Polytrack/Icon.png",
+            "Author": "Kodub",
+            "Tags": [
+                "Racing",
+                "Cars"
+            ],
+
+            "Base": "Polytrack/0.6.3",
             "Index": "index.html"
         },
         {
