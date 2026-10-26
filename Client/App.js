@@ -11,6 +11,8 @@ let Agreed = false;
 
 let ClickerEasteregg = 0;
 
+const TabMode = true; // I prolly wont release this but you can use it on your link if you want.
+
 if (!localStorage.getItem("TOSWG Ticket")) {
     localStorage.setItem("TOSWG Ticket", crypto.randomUUID());
 }
@@ -20,19 +22,14 @@ let Visitors = -1;
 const BackendURL = "https://suzuki-royal-mountains-intended.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
-    // 1738, aye
-    // I'm like
-    "hey",
-    "whats up",
-    "hello",
-
+    "hi",
     "ngl ima take a nap lmk",
     "who do you think you are, i am",
     "oh how i hate shockwaves 🤓",
     "ngl, ur pretty cool",
     "999",
     "please speed i need this",
-    "im top admin in the furry roleplay discord",
+    "im top admin in the furry roleplay discord (I'm joking)",
     "i guess bro",
     "what is a \"bool\"",
     "ima say a really some really bad words: heck, stupid, darn, dang, idiot, shoot. i bet you didnt know i knew those words",
@@ -43,6 +40,10 @@ const VeryMeaningfulMessages = [
 ];
 
 async function Initialize() {
+    window.addEventListener("scroll", () => {
+        document.getElementById("Background").style.backgroundPosition = `0px ${window.scrollY * 0.25}px`;
+    });
+
     Options.innerHTML = "";
 
     const response = await fetch(MetadataPath);
@@ -75,8 +76,7 @@ function LoadWarning() { // ignore that this is kinda cursed looking
             <p></p>
             <button onclick="Agreed = true; LoadHome();">Agree</button>
             <button onclick="LoadDisagree();">Disagree</button>
-            <br>
-            <button onclick="LoadNickEh30(); Agreed = true;">Accept (With Nick Eh 30 Intro)</button>
+            <!-- <br><button onclick="LoadNickEh30(); Agreed = true;">Accept (With Nick Eh 30 Intro)</button> -->
         </div>
     `;
 }
@@ -101,9 +101,67 @@ function LoadDisagree() {
     `;
 }
 
-function LoadHome() {
+let AlreadyPreloaded = false;
+async function LoadHome() {
     if (!Agreed) return;
 
+    if (AlreadyPreloaded) {
+        DisplayHome();
+        AlreadyPreloaded = true;
+        return;
+    }
+
+    const message = VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)];
+
+    Content.innerHTML = `
+        <div class="InfoUI" id="PreloadScreen">
+            <h1 style="color:yellow;">[ Preloading ]</h1>
+            <p id="PreloadStatus">Preparing icons...</p>
+            <progress id="PreloadProgress" value="0" max="100"></progress>
+            <button onclick="DisplayHome();" style="margin-top: 25px;">Skip</button>
+        </div>
+    `;
+
+    const games = Metadata["Games"].filter(game => !game.Unlisted);
+    const total = games.length;
+    let loaded = 0;
+
+    const status = document.getElementById("PreloadStatus");
+    const progress = document.getElementById("PreloadProgress");
+
+    await Promise.all(games.map(game => {
+        return new Promise(resolve => {
+            const img = new Image();
+
+            img.onload = () => {
+                loaded++;
+                progress.value = (loaded / total) * 100;
+                status.textContent = `${message} [ ${loaded}/${total} ]`;
+                resolve();
+            };
+
+            img.onerror = () => {
+                loaded++;
+                progress.value = (loaded / total) * 100;
+                status.textContent = `${message} [ ${loaded}/${total} ] (failed)`;
+                resolve();
+            };
+
+            img.src = GameRoot + game.Icon;
+        });
+    }));
+
+    // this makes it feel more official
+    // oh and if you have faster speeds than for what this loading screen is designed for, you can actually read the message
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    DisplayHome();
+}
+
+function DisplayHome() {
+    if (!Agreed) return;
+
+    AlreadyPreloaded = true;
     ClickerEasteregg++;
     if (ClickerEasteregg > 24)
     {
@@ -123,18 +181,7 @@ function LoadHome() {
     Content.innerHTML = TempContent;
 }
 
-function SetLoading() {
-    Content.classList.remove("GridLayout");
-
-    Content.innerHTML = `<div class="InfoUI">
-        <h1 style="color:yellow;">[ Loading ]</h1>
-        <p>${VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)]}</p>
-        <p>Loading the base file. Please wait...</p>
-    </div>`;
-}
-
 async function LoadGame(ContentBase, IndexName) {
-    SetLoading();
     if (!Agreed) return;
     const response = await fetch(GameRoot + ContentBase + "/" + IndexName);
     const text = await response.text();
