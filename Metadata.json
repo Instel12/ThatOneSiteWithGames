@@ -1131,6 +1131,115 @@
 
             "Base": "LSExplorer",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Gun Spin",
+            "Icon": "GunSpin/Icon.jpg",
+            "Author": "MiniJuegos",
+            "Tags": [
+                "Casual"
+            ],
+
+            "Base": "GunSpin",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "President Simulator",
+            "Icon": "PresidentSimulator/Icon.png",
+            "Author": "emolingo",
+            "Tags": [
+                "Casual",
+                "Clicker"
+            ],
+
+            "Base": "PresidentSimulator",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Raft Wars",
+            "Icon": "RaftWars1/Icon.png",
+            "Author": "Martijn Kunst",
+            "Tags": [
+                "Casual",
+                "Combat"
+            ],
+
+            "Base": "RaftWars1",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Raft Wars 2",
+            "Icon": "RaftWars2/Icon.jpg",
+            "Author": "Martijn Kunst",
+            "Tags": [
+                "Casual",
+                "Combat"
+            ],
+
+            "Base": "RaftWars2",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Slow Roads",
+            "Icon": "SlowRoads/Icon.jpg",
+            "Author": "Anslo",
+            "Tags": [
+                "Casual",
+                "Cars"
+            ],
+
+            "Base": "SlowRoads",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Nothing",
+            "Icon": "Nothing/Icon.jpg",
+            "Author": "Pixelatto",
+            "Tags": [
+                "Casual",
+                "Port"
+            ],
+
+            "Base": "Nothing",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Basketball Stars",
+            "Icon": "BasketballStars/Icon.png",
+            "Author": "MadPuffers",
+            "Tags": [
+                "Sports"
+            ],
+
+            "Base": "BasketballStars",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "BlobeGPT",
+            "Icon": "BlobeGPT/Icon.png",
+            "Author": "Blobby Boi",
+            "Tags": [
+                "Tools"
+            ],
+
+            "Base": "BlobeGPT",
+            "Index": "index.html"
         }
     ]
 }
