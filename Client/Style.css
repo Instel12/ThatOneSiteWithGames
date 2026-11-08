@@ -143,6 +143,7 @@ button {
     border-radius: 0;
     border: none;
     margin-bottom: 0.3%;
+    cursor: pointer;
 }
 
 #PreloadProgress {

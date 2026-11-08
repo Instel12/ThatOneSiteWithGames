@@ -19,7 +19,7 @@ if (!localStorage.getItem("TOSWG Ticket")) {
 const Ticket = localStorage.getItem("TOSWG Ticket");
 let Visitors = -1;
 
-const BackendURL = "https://suzuki-royal-mountains-intended.trycloudflare.com";
+const BackendURL = "https://yen-startup-fat-charts.trycloudflare.com";
 
 const VeryMeaningfulMessages = [
     "hi",
@@ -41,7 +41,7 @@ const VeryMeaningfulMessages = [
 
 async function Initialize() {
     window.addEventListener("scroll", () => {
-        document.getElementById("Background").style.backgroundPosition = `0px ${window.scrollY / 6}px`;
+        document.getElementById("Background").style.backgroundPosition = `0px ${window.scrollY / 2}px`;
     });
 
     Options.innerHTML = "";
@@ -197,7 +197,7 @@ async function LoadGame(ContentBase, IndexName) {
     if (ClickerEasteregg < 25) ClickerEasteregg = 0;
 
     Options.innerHTML = "<a onclick='document.getElementById(`RealIframe`).requestFullscreen();'>[ Fullscreen ]</a>";
-    Content.innerHTML = `<iframe id="RealIframe" srcdoc="${finalText.replace(/"/g, '&quot;')}"></iframe>`;
+    Content.innerHTML = `<iframe id="RealIframe" srcdoc="${finalText.replace(/"/g, '&quot;').replace("\"BackendURL\"", BackendURL)}"></iframe>`;
 }
 
 function AddGameTemp(ContentBase, IndexName, Title, Icon){

@@ -24,6 +24,19 @@
 
     "Games": [
         {
+            "Unlisted": true,
+            
+            "Title": "Suggest A Game",
+            "Icon": "SuggestAGame/Icon.png",
+            "Author": "Instel",
+            "Tags": [
+                "Tools"
+            ],
+
+            "Base": "SuggestAGame",
+            "Index": "index.html"
+        },
+        {
             "Unlisted": false,
             
             "Title": "Retrobowl",
@@ -1229,7 +1242,7 @@
             "Index": "index.html"
         },
         {
-            "Unlisted": false,
+            "Unlisted": true,
             
             "Title": "BlobeGPT",
             "Icon": "BlobeGPT/Icon.png",
@@ -1239,6 +1252,19 @@
             ],
 
             "Base": "BlobeGPT",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "TOSWG AI",
+            "Icon": "AI/Icon.png",
+            "Author": "Instel",
+            "Tags": [
+                "Tools"
+            ],
+
+            "Base": "AI",
             "Index": "index.html"
         }
     ]

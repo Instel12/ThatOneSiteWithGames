@@ -1,0 +1,35 @@
+<script>
+    const url = "https://api.allorigins.win/raw?url=" + encodeURIComponent("https://idkkk.railway.web.id/stuff/kahoot")
+
+    async function doit(pin, count, name, speed) {
+        await fetch(url, {
+            "headers": {
+                "content-type": "application/json"
+            },
+            "referrer": "https://idkkk.railway.web.id/kahoot.html",
+            "body": `{"pin":"${pin}},"count":${count},"name":"${name}","speed":"${speed}","random":true}`,
+            "method": "POST",
+            "mode": "cors",
+            "credentials": "omit"
+            });
+
+        await fetch(url, {
+            "headers": {
+                "accept": "*/*",
+                "accept-language": "en-US,en;q=0.9",
+                "content-type": "application/json",
+                "priority": "u=1, i"
+            },
+            "referrer": "https://idkkk.railway.web.id/kahoot.html",
+            "body": `{"pin":"${pin}},"count":${count},"name":"${name}","speed":"${speed}","random":true}`,
+            "method": "POST",
+            "mode": "cors",
+            "credentials": "include"
+        });
+    }
+</script>
+<h1>Kahoot Flooder</h1>
+<p>Pin: <input id="pin" type="number" value="000000"></p>
+<p>Amount: <input id="count" type="number" value="50"></p>
+<p>Name: <input id="name" type="text" value="Bot"></p>
+<button onclick="doit(document.getElementById('pin').value, document.getElementById('count').value, document.getElementById('name').value, 'max')">Flood</button>
