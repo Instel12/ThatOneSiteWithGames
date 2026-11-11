@@ -1266,6 +1266,19 @@
 
             "Base": "AI",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Kahoot Flooder",
+            "Icon": "KahootFlooder/Icon.png",
+            "Author": "Instel",
+            "Tags": [
+                "Tools"
+            ],
+
+            "Base": "KahootFlooder",
+            "Index": "index.html"
         }
     ]
 }

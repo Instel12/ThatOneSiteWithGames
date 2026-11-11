@@ -36,7 +36,8 @@ const VeryMeaningfulMessages = [
     "stay sober",
     "the following are unfunny to joke about:\n9/11\nWorld War II\nCancer\nDisabilities",
     "funkey ehh",
-    "yuh"
+    "yuh",
+    "dang son, where'd you find this?"
 ];
 
 async function Initialize() {
@@ -188,10 +189,12 @@ async function LoadGame(ContentBase, IndexName) {
 
     let finalText;
 
+    finalText = `<script>const CurrentBackend = "${BackendURL}"</script>`
+
     if (!text.includes("<base") && !text.includes("<!-- Don't generate base -->")) {
-        finalText = `<base href="${GameRoot + ContentBase}/">${text}`;
+        finalText += `<base href="${GameRoot + ContentBase}/">${text}`;
     } else {
-        finalText = text;
+        finalText += text;
     }
 
     if (ClickerEasteregg < 25) ClickerEasteregg = 0;
