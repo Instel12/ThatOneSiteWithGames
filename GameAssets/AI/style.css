@@ -5,12 +5,12 @@
 
 body {
     margin: 0;
-    background: #000;
+    /* background: #000; */
     color: white;
     font-family: monospace;
-
+/* 
     background-image: linear-gradient(to right, #2b2b2b 1px, transparent 1px), linear-gradient(to bottom, #2b2b2b 1px, transparent 1px);
-    background-size: 2vw 2vw;
+    background-size: 2vw 2vw; */
 }
 
 #SideMenu {

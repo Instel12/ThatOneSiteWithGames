@@ -19,7 +19,7 @@ if (!localStorage.getItem("TOSWG Ticket")) {
 const Ticket = localStorage.getItem("TOSWG Ticket");
 let Visitors = -1;
 
-const BackendURL = "https://yen-startup-fat-charts.trycloudflare.com";
+let BackendURL = "";
 
 const VeryMeaningfulMessages = [
     "hi",
@@ -60,10 +60,18 @@ async function Initialize() {
 
     LoadWarning();
 
-    RenewVisitation();
-    setInterval(RenewVisitation, 20000)
+    try{
+        const ServerRes = await fetch("https://raw.githubusercontent.com/Instel12/CurrentServer/refs/heads/main/url");
+        const ServerURL = await ServerRes.text();
+        BackendURL = ServerURL.trim() + "/TOSWG";
+        console.log(BackendURL);
+    }
+    catch { }
 
-    console.log(Metadata["Games"].length + " games loaded")
+    RenewVisitation();
+    setInterval(RenewVisitation, 20000);
+
+    console.log(Metadata["Games"].length + " games loaded");
     console.log(VeryMeaningfulMessages[Math.floor(Math.random() * VeryMeaningfulMessages.length)]);
 }
 
