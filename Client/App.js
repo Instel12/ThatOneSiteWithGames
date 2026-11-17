@@ -42,7 +42,7 @@ const VeryMeaningfulMessages = [
 
 async function Initialize() {
     window.addEventListener("scroll", () => {
-        document.getElementById("Background").style.backgroundPosition = `0px ${window.scrollY / 2}px`;
+        document.getElementById("Background").style.backgroundPosition = `0px ${-window.scrollY * 0.3}px`;
     });
 
     Options.innerHTML = "";
