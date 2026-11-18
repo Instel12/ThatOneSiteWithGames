@@ -37,7 +37,8 @@ const VeryMeaningfulMessages = [
     "the following are unfunny to joke about:\n9/11\nWorld War II\nCancer\nDisabilities",
     "funkey ehh",
     "yuh",
-    "dang son, where'd you find this?"
+    "dang son, where'd you find this?",
+    "ai will replace all of this"
 ];
 
 async function Initialize() {

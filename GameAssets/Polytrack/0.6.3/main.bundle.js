@@ -22968,7 +22968,7 @@
                     f.set(this, []),
                     p.set(this, new Map),
                     (0,
-                    r.GG)(this, h, new Worker("simulation_worker.bundle.js"), "f"),
+                    r.GG)(this, h, new Worker("https://instel12.github.io/ThatOneSiteWithGames/GameAssets/Polytrack/0.6.3/simulation_worker.bundle.js"), "f"),
                     (0,
                     r.gn)(this, h, "f").addEventListener("error", (e => {
                         throw new Error("Simulation error: " + e.message)
