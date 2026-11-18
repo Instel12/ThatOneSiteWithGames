@@ -1279,6 +1279,88 @@
 
             "Base": "KahootFlooder",
             "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Fancy Pants Adventures: World 1",
+            "Icon": "FancyPants1/Icon.png",
+            "Author": "Brad Borne",
+            "Tags": [
+                "Platformer",
+                "Flash"
+            ],
+
+            "Base": "FancyPants1",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Fancy Pants Adventures: World 2",
+            "Icon": "FancyPants2/Icon.png",
+            "Author": "Brad Borne",
+            "Tags": [
+                "Platformer",
+                "Flash"
+            ],
+
+            "Base": "FancyPants2",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Fancy Pants Adventures: World 3",
+            "Icon": "FancyPants3/Icon.png",
+            "Author": "Brad Borne",
+            "Tags": [
+                "Platformer",
+                "Flash"
+            ],
+
+            "Base": "FancyPants3",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Rolling Forests",
+            "Icon": "RollingForests/Icon.png",
+            "Author": "aerolution",
+            "Tags": [
+                "Survival"
+            ],
+
+            "Base": "RollingForests",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": true,
+            
+            "Title": "Trees Hate You",
+            "Icon": "TreesHateYou/Icon.png",
+            "Author": "tykenn",
+            "Tags": [
+                "Survival"
+            ],
+
+            "Base": "TreesHateYou",
+            "Index": "index.html"
+        },
+        {
+            "Unlisted": false,
+            
+            "Title": "Sandboxels",
+            "Icon": "Sandboxels/Icon.png",
+            "Author": "R74n",
+            "Tags": [
+                "Casual",
+                "Sandbox"
+            ],
+
+            "Base": "Sandboxels",
+            "Index": "index.html"
         }
     ]
 }
